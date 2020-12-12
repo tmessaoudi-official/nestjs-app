@@ -9,8 +9,7 @@ export class AppController {
   @Get()
   getHello(@RequestDecorator() request: RequestExpress): string {
     return (
-      this.appService.getHello() + ' => ' +
-      JSON.stringify(request.headers)
+      this.appService.getHello() + ' => ' + JSON.stringify(request.headers)
     );
   }
 }
