@@ -8,12 +8,12 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.{ts,js}\" \"test/**/*.{ts,js}\"",
+    "format": "prettier --write **/*.{ts,js} --ignore-path .gitignore",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint:es": "eslint \"{src,apps,libs,test}/**/*.{ts,js}\" --fix",
+    "lint:es": "eslint **/*.{ts,js} --fix --ignore-path .gitignore",
     "lint:style": "stylelint **/*.{css,scss} --ignore-path .gitignore",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -22,9 +22,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "lint-staged": {
-    "*.{ts,js}": "eslint",
-    "*.{ts,js}": "prettier",
-    "*.{css,scss}": "stylelint"
+    "*.{ts,js}": ["eslint **/*.{ts,js} --fix --ignore-path .gitignore", "prettier --write **/*.{ts,js} --ignore-path .gitignore"],
+    "*.{css,scss}": "stylelint **/*.{css,scss} --ignore-path .gitignore"
   },
   "husky": {
     "hooks": {
