@@ -1,15 +1,14 @@
-import { Controller, Get, Request as RequestDecorator } from '@nestjs/common';
-import { Request as RequestExpress } from 'express';
+import { Controller, Get, Render, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
 import { AppService } from './app.service';
 
-@Controller()
+@Controller({ path: '/' })
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(@RequestDecorator() request: RequestExpress): string {
-    return (
-      this.appService.getHello() + ' => ' + JSON.stringify(request.headers)
-    );
+  @Get('')
+  @Render('index.html.twig')
+  getHello(@Req() request: Request, @Res() response: Response): unknown {
+    return { title: 'Hello world!' };
   }
 }
