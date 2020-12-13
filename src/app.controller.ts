@@ -5,20 +5,20 @@ import { ConfigService } from '@nestjs/config';
 
 @Controller({ path: '/' })
 export class AppController {
-  constructor(
-    @Inject(AppService) private readonly appService: AppService,
-    @Inject(ConfigService) private readonly configService: ConfigService,
-  ) {}
+    constructor(
+        @Inject(AppService) private readonly appService: AppService,
+        @Inject(ConfigService) private readonly configService: ConfigService,
+    ) {}
 
-  @Get('')
-  @Render('index.html.twig')
-  invoke(@Req() request: Request): unknown {
-    return {
-      title:
-        'Hello world! from : ' +
-        request.ip +
-        ' -- ' +
-        this.configService.get<string>('APP_ENV'),
-    };
-  }
+    @Get('')
+    @Render('index.html.twig')
+    invoke(@Req() request: Request): unknown {
+        return {
+            title:
+                'Hello world! from : ' +
+                request.ip +
+                ' -- ' +
+                this.configService.get<string>('APP_ENV'),
+        };
+    }
 }
