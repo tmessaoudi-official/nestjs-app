@@ -1,14 +1,14 @@
 module.exports = {
     '*.{ts,js}': (files) => {
-        return ['pnpm run lint:es'];
+        return ['pnpm lint:es'];
     },
     '*.css': (files) => {
-        return ['pnpm run lint:style:css'];
+        return ['pnpm lint:style:css'];
     },
     '*.scss': (files) => {
-        return ['pnpm run lint:style:scss'];
+        return ['pnpm lint:style:scss'];
     },
     '*.{ts,js,css,scss}': (files) => {
-        return ['pnpm run format'];
+        return ['pnpm format'];
     },
 };
