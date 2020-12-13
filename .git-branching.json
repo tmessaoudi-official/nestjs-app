@@ -1,0 +1,23 @@
+{
+  "root": {
+    "allowed": [
+      "develop"
+    ],
+    "disallowed": [
+      "master"
+    ]
+  },
+  "flow": {
+      "separator": "/",
+      "prefix": [
+          "feature",
+          "fix",
+          "hotfix",
+          "release"
+      ],
+      "suffix": {
+        "length": [5,10],
+        "regex": "[A-Z]+-[0-9]+."
+      }
+  }
+}
