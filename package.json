@@ -1,91 +1,91 @@
 {
-  "name": "app",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
-  "scripts": {
-    "format": "prettier --write **/*.{ts,js,css,scss} --ignore-path .gitignore",
-    "lint:es": "eslint **/*.{ts,js} --fix --ignore-path .gitignore",
-    "lint:style:css": "stylelint **/*.css --ignore-path .gitignore",
-    "lint:style:scss": "stylelint **/*.scss --syntax=scss --ignore-path .gitignore",
-    "lint:style": "pnpm lint:style:css && pnpm lint:style:scss",
-    "refactor": "pnpm format && pnpm lint:es && pnpm lint:style",
-    "prebuild": "rimraf dist",
-    "build": "nest build",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
-  },
-  "dependencies": {
-    "@nestjs/common": "^7.6.1",
-    "@nestjs/config": "^0.6.1",
-    "@nestjs/core": "^7.6.1",
-    "@nestjs/platform-express": "^7.6.1",
-    "@tmessaoudi-official/dot-env-loader": "https://github.com/tmessaoudi-official/dot-env-loader/archive/0.0.9.tar.gz",
-    "reflect-metadata": "^0.1.13",
-    "rimraf": "^3.0.2",
-    "rxjs": "^6.6.3",
-    "twig": "^1.15.4"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@nestjs/cli": "^7.5.4",
-    "@nestjs/schematics": "^7.2.5",
-    "@nestjs/testing": "^7.6.1",
-    "@types/express": "^4.17.9",
-    "@types/jest": "^26.0.19",
-    "@types/node": "^14.14.13",
-    "@types/supertest": "^2.0.10",
-    "@typescript-eslint/eslint-plugin": "^4.9.1",
-    "@typescript-eslint/parser": "^4.9.1",
-    "branch-name-lint": "^1.4.0",
-    "eslint": "^7.15.0",
-    "eslint-config-prettier": "7.0.0",
-    "eslint-plugin-prettier": "^3.2.0",
-    "husky": "^5.0.6",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1",
-    "stylelint": "^13.8.0",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0",
-    "supertest": "^6.0.1",
-    "ts-jest": "^26.4.4",
-    "ts-loader": "^8.0.12",
-    "ts-node": "^9.1.1",
-    "tsconfig-paths": "^3.9.0",
-    "typescript": "^4.1.3"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src",
-    "testRegex": ".*\\.spec\\.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
+    "name": "app",
+    "version": "0.0.1",
+    "description": "",
+    "author": "",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+        "format": "prettier --write **/*.{ts,js,css,scss,json} --ignore-path .gitignore",
+        "lint:es": "eslint **/*.{ts,js} --fix --ignore-path .gitignore",
+        "lint:style:css": "stylelint **/*.css --ignore-path .gitignore",
+        "lint:style:scss": "stylelint **/*.scss --syntax=scss --ignore-path .gitignore",
+        "lint:style": "pnpm lint:style:css && pnpm lint:style:scss",
+        "refactor": "pnpm format && pnpm lint:es && pnpm lint:style",
+        "prebuild": "rimraf dist",
+        "build": "nest build",
+        "start": "nest start",
+        "start:dev": "nest start --watch",
+        "start:debug": "nest start --debug --watch",
+        "start:prod": "node dist/main",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:cov": "jest --coverage",
+        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+        "test:e2e": "jest --config ./test/jest-e2e.json"
     },
-    "collectCoverageFrom": [
-      "**/*.(t|j)s"
-    ],
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
-  },
-  "pnpm": {
-    "overrides": {
-      "webpack": "^5.0"
+    "dependencies": {
+        "@nestjs/common": "^7.6.1",
+        "@nestjs/config": "^0.6.1",
+        "@nestjs/core": "^7.6.1",
+        "@nestjs/platform-express": "^7.6.1",
+        "@tmessaoudi-official/dot-env-loader": "https://github.com/tmessaoudi-official/dot-env-loader/archive/0.0.9.tar.gz",
+        "reflect-metadata": "^0.1.13",
+        "rimraf": "^3.0.2",
+        "rxjs": "^6.6.3",
+        "twig": "^1.15.4"
     },
-    "replacements": {}
-  }
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
+        "@nestjs/cli": "^7.5.4",
+        "@nestjs/schematics": "^7.2.5",
+        "@nestjs/testing": "^7.6.1",
+        "@types/express": "^4.17.9",
+        "@types/jest": "^26.0.19",
+        "@types/node": "^14.14.13",
+        "@types/supertest": "^2.0.10",
+        "@typescript-eslint/eslint-plugin": "^4.9.1",
+        "@typescript-eslint/parser": "^4.9.1",
+        "colors": "^1.4.0",
+        "eslint": "^7.15.0",
+        "eslint-config-prettier": "7.0.0",
+        "eslint-plugin-prettier": "^3.2.0",
+        "husky": "^5.0.6",
+        "jest": "^26.6.3",
+        "lint-staged": "^10.5.3",
+        "prettier": "^2.2.1",
+        "stylelint": "^13.8.0",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-standard": "^20.0.0",
+        "supertest": "^6.0.1",
+        "ts-jest": "^26.4.4",
+        "ts-loader": "^8.0.12",
+        "ts-node": "^9.1.1",
+        "tsconfig-paths": "^3.9.0",
+        "typescript": "^4.1.3"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "ts"
+        ],
+        "rootDir": "src",
+        "testRegex": ".*\\.spec\\.ts$",
+        "transform": {
+            "^.+\\.(t|j)s$": "ts-jest"
+        },
+        "collectCoverageFrom": [
+            "**/*.(t|j)s"
+        ],
+        "coverageDirectory": "../coverage",
+        "testEnvironment": "node"
+    },
+    "pnpm": {
+        "overrides": {
+            "webpack": "^5.0"
+        },
+        "replacements": {}
+    }
 }

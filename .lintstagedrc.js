@@ -8,7 +8,7 @@ module.exports = {
     '*.scss': (files) => {
         return ['pnpm lint:style:scss'];
     },
-    '*.{ts,js,css,scss}': (files) => {
+    '*.{ts,js,css,scss,json}': (files) => {
         return ['pnpm format'];
     },
 };
