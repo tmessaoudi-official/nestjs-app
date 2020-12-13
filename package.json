@@ -36,8 +36,10 @@
   },
   "dependencies": {
     "@nestjs/common": "^7.5.1",
+    "@nestjs/config": "^0.6.1",
     "@nestjs/core": "^7.5.1",
     "@nestjs/platform-express": "^7.5.1",
+    "@tmessaoudi-official/dot-env-loader": "https://github.com/tmessaoudi-official/dot-env-loader/archive/0.0.9.tar.gz",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3",
@@ -88,5 +90,11 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "pnpm": {
+    "overrides": {
+      "webpack": "^5.0"
+    },
+    "replacements": {}
   }
 }
